@@ -1,0 +1,93 @@
+.header {
+    background-color: #150050;   
+}
+
+
+.name {
+    font-family: "Bebas Neue", sans-serif;
+    font-size: 35px;
+    margin: 0px;
+    color: #FFE6E6;
+}
+
+.menubar {
+    display: flex;
+    justify-content: center;
+    list-style-type: none;
+    font-size: 25px;
+    font-family: "Bebas Neue", sans-serif;
+    gap: 70px;
+    cursor: pointer;
+}
+
+.menubar li {
+    position: relative;
+    display: block;
+    overflow: hidden;
+}
+
+.menubar li span {
+    transition: transform 0.3s ease-out;
+    color: #FFE6E6;
+}
+
+.menubar li span:first-child {
+    display: inline-block;
+    padding: 10px;
+}
+
+.menubar li span:last-child {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transform: translateY(-100%);
+}
+
+.menubar i {
+    font-size: 35px;
+}
+
+.menubar li:hover span:first-child {
+    transform: translateY(100%);
+}
+
+.menubar li:hover span:last-child,
+.menubar[data-animation] a:hover span:last-child {
+    transform: none;
+}
+
+.menubar[data-animation="to-top"] a:hover span:first-child {
+    transform: translateY(-100%);
+}
+
+.headercontainer {
+    /* border: 1px solid black; */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    /* background-color: black; */
+    color: #FFE6E6;
+    padding: 10px 20px;
+}
+
+@media only screen and (max-width: 767px) {
+    .menubar{
+        gap: 30px;
+        font-size: 18px;
+    }
+    
+    .name{
+        font-size: 25px;
+    }
+}
+
+@media only screen and (max-width: 575px) {
+    .headercontainer {
+        flex-direction: column;
+    }
+}

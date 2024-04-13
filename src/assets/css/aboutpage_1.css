@@ -1,0 +1,165 @@
+.aboutme {
+    animation: 1.5s fadeInDown;
+}
+
+.aboutsection {
+    font-family: "Bebas Neue", sans-serif;
+    font-size: 45px;
+    color: #865DFF;
+    margin: 20px 0 10px 0;
+}
+@keyframes fadeInDown {
+    0% {
+      transform: translateY(-100%);
+      opacity: 0;
+    }
+    100% {
+      transform: translateY(0%);
+      opacity: 1;
+    }
+  }
+.aboutdetials {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.aboutinfo {
+    font-size: 20px;
+    font-weight: 400;
+    color: #FFE6E6;
+    margin: 0;
+    padding: 0;
+    width: 50%;
+}
+
+@keyframes slide-in-anim {
+    20% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+.technologydata {
+    font-size: 20px;
+    font-weight: 400;
+    color: #FFE6E6;
+    margin: 0 20px 20px 0;
+    padding: 0;
+}
+
+.skillsection {
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.techskills {
+    display: flex;
+    flex-direction: column;
+}
+
+.skillsicons {
+    height: 60px;
+    width: 60px;
+}
+
+.skillsicons:hover+.skilltiptext {
+    visibility: visible;
+}
+
+.skilltiptext {
+    width: 120px;
+    background-color: #50C4ED;
+    color: #150050;
+    text-align: center;
+    font-weight: 550;
+    border-radius: 6px;
+    padding: 5px 0;
+    visibility: hidden;
+    margin-bottom: 15px;
+}
+
+.aboutprofilepic {
+    height: 400px;
+    width: 350px;
+    border-radius: 10px;
+    /* animation: slide-in-anim 2s ease-out forwards; */
+}
+
+.aboutprofilepic:hover {
+    filter: grayscale(100%)
+}
+
+@media only screen and (max-width: 767px) {
+    .aboutsection {
+        font-size: 35px;
+    }
+    .aboutdetials {
+        flex-direction: column-reverse;
+    }
+
+    .aboutprofilepic {
+        height: 300px;
+        width: 300px;
+    }
+
+    .aboutinfo {
+        width: 100%;
+        padding: 10px 10px 10px 10px;
+        font-size: 17px;
+        font-weight: 400;
+    }
+
+    .technologydata {
+        font-size: 17px;
+        font-weight: 400;
+    }
+
+    .skillsicons {
+        height: 45px;
+        width: 45px;
+    }
+
+    .skilltiptext {
+        width: 100px;
+        font-size: 12px;
+        font-weight: 450;
+    }
+}
+
+@media only screen and (max-width: 575px) {
+    .aboutsection {
+        font-size: 30px;
+    }
+    .aboutinfo {
+        width: 100%;
+        padding: 10px 10px 10px 10px;
+        font-size: 15px;
+        font-weight: 400;
+    }
+    .skillsicons {
+        height: 35px;
+        width: 35px;
+    }
+    .technologydata {
+        font-size: 15px;
+        font-weight: 400;
+    }
+    .skilltiptext {
+        width: 50px;
+        font-size: 10px;
+        font-weight: 400;
+    }
+}
+
+@media only screen and (max-width: 375px) {
+    .aboutsection {
+        font-size: 28px;
+    }
+    .aboutprofilepic {
+        height: 280px;
+        width: 280px;
+    }
+}
